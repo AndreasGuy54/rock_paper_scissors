@@ -19,7 +19,7 @@ function computerPlay() {
 	}
 }
 //  assign choice of computer
-let computerChoice = computerPlay();
+// let computerChoice = computerPlay();
 
 function playRound(userChoice, compChoice) {
 	// Take input from user
@@ -61,10 +61,13 @@ function playRound(userChoice, compChoice) {
 	}
 }
 
-// Call the function to play a round
-let playerChoice;
-playRound(playerChoice, computerChoice);
+function game() {
+	for (let index = 0; index < 5; index++) {
+		let comp = computerPlay();
+		let playerChoice;
+		// Call the function to play a round
+		playRound(playerChoice, comp);
+	}
+}
 
-// function game() {
-
-// }
+game();
